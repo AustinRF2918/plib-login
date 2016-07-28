@@ -22,13 +22,20 @@
     }
 }
 
-@mixin _login_container_generateCenteredElement($selector) {
+@mixin _login_container_generateCenteredElement($selector, $isForm, $formSelector: null) {
     #{$selector} {
 	width: 90%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
+	@if ($isForm) {
+	    #{$formSelector}{
+	    display: flex;
+	    flex-direction: column-reverse;
+	    align-items: flex-start;
+	    }
+	}
     }
 }
 

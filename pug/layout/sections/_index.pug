@@ -15,13 +15,15 @@ body
             .col-md-5.extend-full-height
               +_login_container_generateVCenteredElementContainer("email-address-container")
                 .form-group
-                  label(for="emailAddress") Email Address:
-                  input(type="email" class="form-control", id="email-input")
+                  input(type="email" class=["form-control", "materialize-form"], id="email-input", placeholder="Enter your email")
+                  label(for="emailAddress" class="label") Email Address:
             .col-md-5.extend-full-height
               +_login_container_generateVCenteredElementContainer("password-container")
                 .form-group
-                  label(for="emailAddress") Password:
-                  input(type="email" class="form-control", id="email-input")
+                  input(type="email" class=["form-control", "materialize-form"], id="email-input", placeholder="Enter your password")
+                  label(for="emailAddress" class="label") Password:
             .col-md-2.extend-full-height
               +_login_container_generateVCenteredElementContainer("login-container")
-                p Log In
+                .form-group
+                  a(class=["btn", "btn-login"]) Login
+                  label(class=["consistency-hide"] for="btn") Password:
