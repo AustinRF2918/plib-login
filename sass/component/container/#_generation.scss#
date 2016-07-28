@@ -1,5 +1,5 @@
 html, body{
-	overflow: hidden;
+    overflow: hidden;
 }
 
 @mixin _login_container_generateCenteredContainer($selector, $widthAsPercent, $heightAsPercent, $mobileHeight) {

@@ -8,37 +8,6 @@
     .light-text {
       font-size: 20px; } }
 
-@media screen and (max-width: 768px) {
-  .m-t-md-2 {
-    margin-top: 2em; } }
-
-.rel-opl {
-  position: relative;
-  top: -90px; }
-
-@media screen and (max-width: 767px) {
-  .dam {
-    display: none; } }
-
-@media screen and (max-height: 767px) {
-  .p-l-0-mobile {
-    padding-left: 0px !important; } }
-
-.full-page-background {
-  background: url("/img/primary_background.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-html, body {
-  width: 100vw;
-  height: 100vh; }
-
-.full-page {
-  width: 100%;
-  height: 100%; }
-
 @media screen and (min-width: 992px) {
   .extend-full-height {
     height: 100%; } }
@@ -88,16 +57,50 @@ html, body {
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
-  transition-duration: 0.2s; }
+  transition-duration: 0.1s; }
   .materialize-form + label {
-    transition-duration: 0.2s; }
+    transition-duration: 0.1s; }
   .materialize-form:focus {
-    border-color: #00806a; }
+    border-bottom: 2px solid #00806a; }
+
+@media screen and (max-width: 768px) {
+  .m-t-md-2 {
+    margin-top: 2em; } }
+
+.rel-opl {
+  position: relative;
+  top: -90px; }
+
+@media screen and (max-width: 767px) {
+  .dam {
+    display: none; } }
+
+@media screen and (max-height: 767px) {
+  .p-l-0-mobile {
+    padding-left: 0px !important; } }
+
+.full-page-background {
+  background: url("/img/primary_background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+html, body {
+  width: 100vw;
+  height: 100vh; }
+
+.full-page {
+  width: 100%;
+  height: 100%; }
+
+html, body {
+  overflow: hidden; }
 
 @media screen and (min-width: 992px) {
   .primary-container {
-    width: 55vw;
-    height: 60vh;
+    width: 50vw;
+    height: 50vh;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -117,18 +120,17 @@ html, body {
   padding-right: 30px;
   border-radius: 0px; }
   .cta-container::before {
-    content: "";
     position: absolute;
+    content: "";
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.2);
-    filter: blur(20px);
+    background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26); }
   @media screen and (min-width: 991px) {
     .cta-container {
-      height: 150px;
+      height: 170px;
       width: 100%; } }
   @media screen and (max-width: 992px) {
     .cta-container {
