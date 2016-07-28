@@ -4,6 +4,9 @@
     height: 100%;
 }
 
+.extend-full-width {
+    height: 100%;
+}
 @include _login_container_generateCenteredContainer(".primary-container", 60vw, 60vh);
 
 @mixin _login_container_generateCTAClusterContainer {

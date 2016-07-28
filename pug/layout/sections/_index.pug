@@ -14,10 +14,14 @@ body
           +_login_container_generateClusterContainer("cta-container")
             .col-md-5.extend-full-height
               +_login_container_generateVCenteredElementContainer("email-address-container")
-                p Email Address
+                .form-group
+                  label(for="emailAddress") Email Address:
+                  input(type="email" class="form-control", id="email-input")
             .col-md-5.extend-full-height
               +_login_container_generateVCenteredElementContainer("password-container")
-                p Password
+                .form-group
+                  label(for="emailAddress") Password:
+                  input(type="email" class="form-control", id="email-input")
             .col-md-2.extend-full-height
               +_login_container_generateVCenteredElementContainer("login-container")
                 p Log In
