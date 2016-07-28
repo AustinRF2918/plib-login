@@ -1,24 +1,44 @@
-@mixin _login_container_generateCenteredContainer($selector, $widthAsPercent, $heightAsPercent) {
+@mixin _login_container_generateCenteredContainer($selector, $widthAsPercent, $heightAsPercent, $mobileHeight) {
     #{$selector} {
-	width: $widthAsPercent;
-	height: $heightAsPercent;
+	@media screen and (min-width: 992px){
+	  width: $widthAsPercent;
+	  height: $heightAsPercent;
+	  position: absolute;
 
-	position: absolute;
+	  left: 50%;
+	  top: 50%;
 
-	left: 50%;
-	top: 50%;
+	  transform: translateY(-50%) translateX(-50%);
+	}
 
-	transform: translateY(-50%) translateX(-50%);
+	@media screen and (max-width: 991px) {
+	  position: absolute;
+	  width: 100%;
+	  top: $mobileHeight;
+	  transform: translateY(-$mobileHeight);
+	}
+
+	
     }
 }
 
-@mixin _login_container_generateClusterContainer($selector, $height, $width) {
+@mixin _login_container_generateClusterContainer($selector, $height, $width, $mobileHeight) {
     #{$selector} {
 	@warning("Utilizing _login_container_generateCTAClusterContainer requires the mixin");
 	@warning("_login_container_CTAPrerequisite to be defined.");
+
 	@include _login_container_generateCTAClusterContainer
-	height: $height;
-	width: $width;
+	@media screen and (min-width: 991px) {
+	  height: $height;
+	  width: $width;
+	}
+
+	@media screen and (max-width: 992px) {
+	    margin: 0px;
+	    padding:0px;
+	    width: 100%;
+	    height: $mobileHeight;
+	}
     }
 }
 
@@ -34,6 +54,14 @@
 	    display: flex;
 	    flex-direction: column-reverse;
 	    align-items: flex-start;
+	    }
+	}
+
+	@media screen and (max-width: 992px){
+	    a{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 	    }
 	}
     }

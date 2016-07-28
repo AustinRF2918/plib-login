@@ -17,5 +17,12 @@ $palette-6: $grey;
 .light-text {
     color: $white;
     opacity: 0.7;
+    @media screen and (min-width: 768px) {
+	font-size: 30px;
+    }
+
+    @media screen and (max-width: 767px) {
+	font-size: 20px;
+    }
 }
 

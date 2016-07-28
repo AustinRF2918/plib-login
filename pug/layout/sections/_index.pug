@@ -3,26 +3,26 @@ include ../../utility/component-lib/_login_background_generateBackground.pug
 body
   +_login_background_generateBackground("full-page", "full-page-background")
     +_login_container_generateCenteredContainer("primary-container")
-      .row
-        .col-md-12
+      .row.no-margin-mobile
+        .col-lg-12
           i(class=["fa", "fa-tree fa-2x"] aria-hidden="true")
-      .row.m-t-1
-        .col-md-6
+      .row.m-t-1.no-margin-mobile
+        .col-lg-6
           h1.light-text Lorem ipsum is a lorem ipsum iorem ipsum lorem ipsum.
-      .row.m-t-1
-        .col-md-12
+      .row.m-t-1.no-margin-mobile
+        .col-lg-12.p-y-2
           +_login_container_generateClusterContainer("cta-container")
-            .col-md-5.extend-full-height
+            .col-lg-5.extend-full-height
               +_login_container_generateVCenteredElementContainer("email-address-container")
                 .form-group
                   input(type="email" class=["form-control", "materialize-form"], id="email-input", placeholder="Enter your email")
                   label(for="emailAddress" class="label") Email Address:
-            .col-md-5.extend-full-height
+            .col-lg-5.extend-full-height
               +_login_container_generateVCenteredElementContainer("password-container")
                 .form-group
-                  input(type="email" class=["form-control", "materialize-form"], id="email-input", placeholder="Enter your password")
+                  input(type="password" class=["form-control", "materialize-form"], id="password-input", placeholder="Enter your password")
                   label(for="emailAddress" class="label") Password:
-            .col-md-2.extend-full-height
+            .col-lg-2.extend-full-height
               +_login_container_generateVCenteredElementContainer("login-container")
                 .form-group
                   a(class=["btn", "btn-login"]) Login

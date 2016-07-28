@@ -1,7 +1,13 @@
 @import 'generation';
 
 .extend-full-height {
-    height: 100%;
+    @media screen and (min-width: 992px){
+      height: 100%;
+    }
+
+    @media screen and (max-width: 991px){
+	height: 100px;
+    }
 }
 
 .extend-full-width {
@@ -12,10 +18,18 @@
     color: transparent;
 }
 
+.no-margin-mobile {
+    @media screen and (max-width: 992px) {
+	margin: 0px;
+    }
+}
+
 .btn-login {
   background: #0288D1;
   padding: 10px 24px 10px 24px;
-  margin: 6px 8px 6px 8px;
+  position: relative;
+  top: -2px;
+  margin: 0px;
   min-width: 88px;
   border-radius: 0px;
   color: white;
@@ -51,25 +65,28 @@
     }
 
     &:focus {
-      border-color: #004D40;
-
-	&+label {
-	    color: red;
-	}
+      border-color: lighten(#004D40, 10%);
     }
 }
 
-@include _login_container_generateCenteredContainer(".primary-container", 55vw, 60vh);
+@include _login_container_generateCenteredContainer(".primary-container", 55vw, 60vh, 50%);
 
 @mixin _login_container_generateCTAClusterContainer {
     padding-left: 30px;
     padding-right: 30px;
-    background: rgba(255, 255, 255, 0.45);
-    color: white;
     border-radius: 0px;
+
+    &::before{
+	content: "";
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(255, 255, 255, 0.2);
+	filter: blur(20px);
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
+    }
 }
 
-@include _login_container_generateClusterContainer(".cta-container", 150px, 100%);
+@include _login_container_generateClusterContainer(".cta-container", 150px, 100%, 280px);
 
 @include _login_container_generateCenteredElement(".email-address-container", true, ".form-group");
 @include _login_container_generateCenteredElement(".password-container", true, ".form-group");
