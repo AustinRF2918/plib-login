@@ -2,7 +2,7 @@
 //center is self, non repeating. First parameter is the element which
 //must be prefixed by a CSS selector, second parameter is the link in
 //which the image is located.
-@mixin generateBackgroundOnElement($selector, $link) {
+@mixin _login_background_generateBackgroundOnElement($selector, $link) {
     #{$selector} {
 	background: url($link) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -13,4 +13,4 @@
 }
 
 //Example usage:
-//@include generateBackgroundOnElement(".full-page-background", "/img/primary_background.jpg");
+//@include _login_background_generateBackgroundOnElement(".full-page-background", "/img/primary_background.jpg");

@@ -1,4 +1,4 @@
 @import 'generation';
 
-@include generateFullScreenPage;
-@include forceFitToParentElement(".full-page");
+@include _login_sizing_generateFullScreenPage;
+@include _login_sizing_forceFitToParentElement(".full-page");
