@@ -1,0 +1,4 @@
+@import 'generation';
+
+@include generateFullScreenPage;
+@include forceFitToParentElement(".full-page");

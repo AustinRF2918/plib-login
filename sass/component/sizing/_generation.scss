@@ -1,0 +1,13 @@
+@mixin generateFullScreenPage {
+    html, body{
+    width: 100vw;
+    height: 100vh;
+    }
+}
+
+@mixin forceFitToParentElement($selector) {
+    #{$selector} {
+	width: 100%;
+	height: 100%;
+    }
+}
