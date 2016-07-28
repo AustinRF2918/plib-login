@@ -4,6 +4,7 @@ $dark-grey: #4c5360;
 $grey: darken(#e0e0e0, 15%);
 $blue: #28237f;
 $dark-blue: 28237f;
+$white: white;
 
 
 $palette-1: $purple;
@@ -12,4 +13,8 @@ $palette-3: $blue;
 $palette-4: $dark-blue;
 $palette-5: $light-grey;
 $palette-6: $grey;
+
+.light-text {
+    color: $white;
+}
 
