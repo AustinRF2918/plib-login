@@ -11,3 +11,22 @@
 	transform: translateY(-50%) translateX(-50%);
     }
 }
+
+@mixin _login_container_generateClusterContainer($selector, $height, $width) {
+    #{$selector} {
+	@warning("Utilizing _login_container_generateCTAClusterContainer requires the mixin");
+	@warning("_login_container_CTAPrerequisite to be defined.");
+	@include _login_container_generateCTAClusterContainer
+	height: $height;
+	width: $width;
+    }
+}
+
+@mixin _login_container_generateCenteredElement($selector) {
+    #{$selector} {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+    }
+}
+

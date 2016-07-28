@@ -1,5 +1,6 @@
 .light-text {
-  color: white; }
+  color: white;
+  opacity: 0.7; }
 
 @media screen and (max-width: 768px) {
   .m-t-md-2 {
@@ -32,10 +33,40 @@ html, body {
   width: 100%;
   height: 100%; }
 
+.extend-full-height {
+  height: 100%; }
+
 .primary-container {
-  width: 50vw;
-  height: 50vh;
+  width: 60vw;
+  height: 60vh;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%); }
+
+.cta-container {
+  @warning ("Utilizing _login_container_generateCTAClusterContainer requires the mixin");
+  @warning ("_login_container_CTAPrerequisite to be defined.");
+  padding-left: 30px;
+  padding-right: 30px;
+  background: rgba(255, 255, 255, 0.45);
+  color: white;
+  font-weight: 800;
+  border-radius: 10px;
+  height: 200px;
+  width: 100%; }
+
+.email-address-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.password-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }

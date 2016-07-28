@@ -1,3 +1,22 @@
 @import 'generation';
 
-@include _login_container_generateCenteredContainer(".primary-container", 50vw, 50vh);
+.extend-full-height {
+    height: 100%;
+}
+
+@include _login_container_generateCenteredContainer(".primary-container", 60vw, 60vh);
+
+@mixin _login_container_generateCTAClusterContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: rgba(255, 255, 255, 0.45);
+    color: white;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+@include _login_container_generateClusterContainer(".cta-container", 200px, 100%);
+
+@include _login_container_generateCenteredElement(".email-address-container");
+@include _login_container_generateCenteredElement(".password-container");
+@include _login_container_generateCenteredElement(".login-container");

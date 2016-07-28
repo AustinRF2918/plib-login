@@ -2,5 +2,22 @@ include ../../utility/component-lib/_login_container_generateContainer.pug
 include ../../utility/component-lib/_login_background_generateBackground.pug
 body
   +_login_background_generateBackground("full-page", "full-page-background")
-    +_login_container_generateContainer("primary-container")
-      h1 Hello sfdafdsa fsaf asf sa fsa
+    +_login_container_generateCenteredContainer("primary-container")
+      .row
+        .col-md-12
+          i(class=["fa", "fa-tree fa-2x"] aria-hidden="true")
+      .row.m-t-1
+        .col-md-6
+          h1.light-text Lorem ipsum is a lorem ipsum iorem ipsum lorem ipsum.
+      .row.m-t-1
+        .col-md-12
+          +_login_container_generateClusterContainer("cta-container")
+            .col-md-5.extend-full-height
+              +_login_container_generateVCenteredElementContainer("email-address-container")
+                p Email Address
+            .col-md-5.extend-full-height
+              +_login_container_generateVCenteredElementContainer("password-container")
+                p Password
+            .col-md-2.extend-full-height
+              +_login_container_generateVCenteredElementContainer("login-container")
+                p Log In
