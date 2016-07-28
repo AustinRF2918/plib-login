@@ -1,2 +1,6 @@
+include ../../utility/component-lib/_login_container_generateContainer.pug
+include ../../utility/component-lib/_login_background_generateBackground.pug
 body
-  include ../../component/_background_generation.pug
+  +_login_background_generateBackground("full-page", "full-page-background")
+    +_login_container_generateContainer(".primary-container")
+      h1 Hello
